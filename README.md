@@ -1,4 +1,5 @@
-Welcome to Vactor! This project is a comprehensive platform designed for publishing educational content, including blogs, videos, and offering educational consulting services. Our goal is to provide valuable resources and support for learners and educators alike.
+Welcome to Vactor! 
+This project is a comprehensive platform designed for publishing educational content, including blogs, videos, and offering educational consulting services. Our goal is to provide valuable resources and support for learners and educators alike.
 
 
 ### Features
