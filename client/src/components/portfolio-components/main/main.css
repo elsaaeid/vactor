@@ -1,0 +1,148 @@
+main {
+  height: 30vw;
+}
+.main__container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+  }
+.intro {
+  position: relative;
+  box-shadow: var(--shadow-color);
+  border-radius: 0px 0px 150px 150px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-primary-variant);
+}
+.intro-para {
+  z-index: 28;
+}
+.greay-box-content {
+  box-shadow: var(--shadow-color);
+  border-radius: 0px 0px 150px 150px;
+  background-image: url("../../../assets/intro.gif");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-attachment: local;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+}
+.greay-box-content:hover {
+  border: 1px solid var(--color-primary-variant);
+}
+.greay-box-content .overlay {
+    box-shadow: var(--shadow-color);
+    border-radius: 0px 0px 150px 150px;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    transition: background 0.2s;
+    background: var(--color-overlay);
+  }
+.intro-btns {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+  /*==================CTA=====================*/
+  .cta {
+    height: 30vh;
+  }
+  .cta a {
+    margin: auto;
+    font-weight: 500;
+    box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
+    font-size: 11px;
+}
+.cta a:focus {
+  outline:none;
+}
+.cta .introduction p {
+  color: var(--color-cursor);
+  font-size: 14px;
+  text-align: center;
+  padding: 18px;
+}
+/* ===================MEDIA QUERIES (MEDIUM DEVICES) =============================*/
+@media screen and (max-width: 1024px) {
+.intro {
+  width: 100%;
+  flex-direction: column;
+}
+.greay-box-content {
+  width: 100%;
+  position: absolute;
+  height: 37rem;
+}
+.greay-box-content .overlay {
+  height: 50rem;
+}
+.intro-para {
+  position: absolute;
+  width: 80%;
+}
+}
+@media screen and (max-width: 912px) {
+  main {
+    height: 64vw;
+}
+}
+
+@media screen and (max-width: 820px) {
+  main {
+    height: 58vw;
+}
+  .greay-box-content {
+    height: 30rem;
+}
+}
+@media screen and (max-width: 768px) {
+  main {
+    height: 60vw;
+}
+.greay-box-content {
+  height: 29rem;
+}
+}
+  /* ===================MEDIA QUERIES (SMALL DEVICES) =============================*/
+  @media screen and (max-width: 540px) {
+  .cta .introduction p{
+    font-size: 10px;
+}
+.greay-box-content {
+  height: 21rem;
+}
+.greay-box-content .overlay {
+  height: 40rem;
+}
+  }
+  @media screen and (max-width: 430px) {
+  .greay-box-content {
+      height: 19rem;
+  }
+  }
+  @media screen and (max-width: 414px) {
+  .greay-box-content {
+      height: 19rem;
+  }
+  }
+  @media screen and (max-width: 412px) {
+    .greay-box-content {
+        height: 16rem;
+    }
+}
+  @media screen and (max-width: 390px) {
+    .greay-box-content {
+      height: 15rem;
+  }
+}
+  @media screen and (max-width: 375px) {
+  .greay-box-content {
+      height: 14rem;
+  }
+  .cta a {
+    font-size: 8px;
+}
+  }

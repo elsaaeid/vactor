@@ -1,0 +1,53 @@
+.stacked-boxes-container {
+    height: 20rem;
+    position: relative;
+    top: 50px;
+  }
+  
+  .box {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    color: var(--color-white);
+    font-size: 12px;
+    transition: z-index 0.3s; /* Smooth transition for z-index change */
+    cursor: pointer;
+    border: 1px solid var(--color-cursor);
+    box-shadow: var(--shadow-color);
+  }
+  
+  .box1 {
+    background-image: linear-gradient(to right top, #8354f3, #8155ef, #008793, #00bf72, #a8eb12);
+    top: 25px;
+    z-index: 3;
+    transform: skewY(30deg); /* Tilt the boxes */
+  }
+  
+  .box2 {
+    background-image: linear-gradient(to right top, #8354f3, #8155ef, #008793, #00bf72, #a8eb12);
+    top: 45px;
+    z-index: 2;
+    transform: skewY(20deg); /* Tilt the boxes */
+  }
+  
+  .box3 {
+    background-image: linear-gradient(to right top, #8354f3, #8155ef, #008793, #00bf72, #a8eb12);
+    top: 80px;
+    z-index: 1;
+  }
+  .box:hover {
+    z-index: 4; /* Bring the hovered box to the forefront */
+    transform: skewY(0deg); /* Tilt the boxes */
+    top: 80px;
+  }
+  @media screen and (max-width: 1024px){
+  .home-view-container {
+      margin-top: 17rem;
+  }
+  }
+  @media screen and (max-width: 920px){
+    .home-view-container {
+        margin-top: 0;
+    }
+    }

@@ -1,0 +1,143 @@
+.contact__container {
+  display: flex;
+   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.contact__option {
+  background: transparent;
+  border: 1px solid var(--color-cursor);
+  box-shadow: var(--shadow-color);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  transition: var(--transition);
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.contact__options h4 {
+  font-size: 25px;
+}
+.contact__option h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
+.contact__option a {
+  margin-top: 0.7rem;
+  font-size: 24px;
+}
+section h2, section h5 {
+  color: var(--color-cursor);
+  font-size: 22px;
+  text-align: center;
+}
+/*================================= FORM =====================================*/
+.select-input option {
+  width: 100%;
+  font-size: 100px;
+}
+.contact {
+  margin-top: 11rem;
+  margin-bottom: 24px;
+}
+/* ===================MEDIA QUERIES (MEDIUM DEVICES) =============================*/
+@media screen and (max-width: 1280px) {
+.contact__container {
+  width: 70%;
+}
+}
+@media screen and (max-width: 912x) {
+.contact__container {
+  width: 90%;
+}
+  }
+/* ===================MEDIA QUERIES (SMALL DEVICES) =============================*/
+@media screen and (max-width: 820px) {
+.contact__container {
+  width: 90%;
+}
+}
+@media screen and (max-width: 540px) {
+button.btn.btn-primary {
+  width: 197px;
+  font-size: 21px;
+}
+.contact__container {
+  flex-direction: column;
+  width: 100%;
+}
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 70%;
+}
+.contact__option h3 {
+  font-size: 16px;
+}
+}
+@media screen and (max-width: 414px) { 
+    .contact__container {
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 412px) {
+  .container.contact__container {
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 390px) {
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+}
+@media screen and (max-width: 375px) {
+  .contact__container {
+    display: flex;
+    flex-direction: column;  
+  }
+  .contact__options {
+    width: 20rem;
+}
+.contact__option h3 {
+  font-size: 16px;
+}
+  }
+  @media screen and (max-width: 360px) {
+    .contact__options {
+      width: 20rem;
+      margin: auto;
+  }
+  }
+  @media screen and (max-width: 280px) {
+    .contact__option h3 {
+      font-size: 16px;
+  }
+.contact__option {
+  width: 16rem;
+}
+.contact__options {
+  width: 16rem;
+}
+  }

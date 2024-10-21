@@ -1,0 +1,11 @@
+
+.code-content {
+    border: 1px solid var(--color-cursor);
+    box-shadow: var(--shadow-color);
+    padding: 16px;
+    border-radius: 5px;
+}
+.code {
+    border-left: 0.5rem solid var(--color-cursor);
+    background-color: var(--color-gray);
+}

@@ -1,0 +1,32 @@
+.videos-filter {
+    border: 1px solid var(--color-cursor);
+    border-radius: 7px;
+}
+.item-box {
+    border: 1px solid;
+}
+.item-box:hover {
+    border: 1px solid var(--color-cursor);
+}
+.item-box:hover .item-box-title {
+    color: var(--color-cursor);
+}
+.search-video-container {
+    width: 100%;
+    right: 29px;
+    z-index: 1;
+}
+.search-video-container.active {
+    width: 100%;
+    right: 29px;
+    z-index: 3;
+}
+.search-icons-video-container {
+    position: absolute;
+    top: 16px;
+    right: 0;
+}
+#playlistSelector {
+    z-index: 2;
+    width: 50%;
+}

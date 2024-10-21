@@ -1,0 +1,25 @@
+.info-box {
+  width: 100%;
+  height: 7rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-bg);
+  transform: translateY(0);
+  transition: all 0.3s;
+
+  // background-color: green;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-primary-variant);
+    transform: translateY(-5px);
+  }
+
+  .info-icon {
+    padding: 0 2rem;
+    color: var(--color-bg);
+  }
+  .info-text > * {
+    color: var(--color-bg);
+  }
+}
