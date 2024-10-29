@@ -200,34 +200,42 @@ const unLikeBlog =  asyncHandler(async (req, res) => {
 });
 
 //commentBlog
-const commentBlog = asyncHandler(async (req, res) => {
-  const { blogId } = req.params;
-  const { comment } = req.body;
-  const userId = req.user.id; // assuming you have a middleware that sets req.user
+const commentBlog = async (req, res) => {
+  const { blogId } = req.params?.blogId; // Get blogId from the request parameters
+  const { comment, userId } = req?.body; // Get comment and userId from the request body
 
   try {
-    const blog = await Blog.findById(blogId);
-    if (!blog) {
-      return res.status(404).json({ error: 'Blog not found' });
-    }
+      // Validate input
+      if (!comment || !userId) {
+          return res.status(400).json({ message: "Comment and user ID are required." });
+      }
 
-    const newComment = new Comment({
-      comment,
-      blog: blogId,
-      user: userId
-    });
-    await newComment.save();
+      // Find the blog post by ID
+      const blog = await Blog.findById(blogId);
+      if (!blog) {
+          return res.status(404).json({ message: "Blog post not found." });
+      }
 
-    blog.comments.push(newComment);
-    await blog.save();
+      // Create a new comment object
+      const newComment = {
+          user: userId,
+          comment: comment,
+          createdAt: new Date() // Optional: add a timestamp
+      };
 
-    res.json({ message: 'Comment added successfully' });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Internal Server Error' });
+      // Add the new comment to the blog's comments array
+      blog.comments.push(newComment);
+
+      // Save the updated blog post
+      await blog.save();
+
+      // Respond with the updated blog post or the new comment
+      res.status(200).json({ message: "Comment added successfully.", comment: newComment });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Server error." });
   }
-});
-
+};
 
 module.exports = {
   createBlog,
